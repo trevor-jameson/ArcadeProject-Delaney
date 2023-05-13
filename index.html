@@ -10,6 +10,8 @@
     <body>
         <div class="tic">
         <h1>Tic Tac Toe</h1>
+        <!-- REVIEW:  ID's should always be unique. This could be rewritten as playerNameX... -->
+        <!-- ...or as a class (which isn't required to be unique) -->
         Player X name: <b><div id="playerName"></div></b>
         Player O name: <b><div id="playerName"></div></b>
         <br /><br />
@@ -23,6 +25,7 @@
             <button onclick="setPlayerName();">Player 2</button>
           </div>
         <div id="board">
+          <!-- REVIEWL Good use of dataset attribute to identify cell indices here -->
           <div data-index="1" class="tile right-border bottom-border"></div>
           <div data-index="2" class="tile right-border bottom-border"></div>
           <div data-index="3" class="tile bottom-border"></div>
@@ -34,6 +37,7 @@
           <div data-index="9" class="tile"></div>
           <div id="strike" class="strike"></div>
         </div>
+        <!-- REVIEW: The hidden class is a good choice here -->
         <div id="game-over-area" class="hidden">
           <h2 id="game-over-text">Winner is X</h2>
           <button id="play-again">Play Again</button>
